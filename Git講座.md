@@ -104,17 +104,37 @@ On branch master
 nothing to commit, working tree clean
 ```
 ## push（プッシュ）
-ローカルリポジトリの変更履歴をリモートリポジトリにアップロードし共有するにはpushという操作を行う。
+ローカルリポジトリの変更履歴をリモートリポジトリにアップロードし共有するにはpushコマンドを実行する。
+```
+$ git push
+```
 この操作を行うことで、リモートリポジトリの変更履歴がローカルリポジトリの変更履歴と同じ状態になる。
 ## clone（クローン）
-リモートリポジトリを複製するにはcloneという操作を行う。
+リモートリポジトリをローカルリポジトリに複製するにはcloneコマンドを実行する。
+```
+$ git clone <repo> [<dir>]
+```
 この操作を行うことで、リモートリポジトリの内容をユーザのローカル環境にダウンロードしローカルリポジトリとして利用できる。
+以下は、このLessonsリポジトリをcloneする例である。
+```
+$ git clone https://github.com/DevelopmentNovices/Lessons.git
+Cloning into 'Lessons'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (7/7), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 7 (delta 0), reused 4 (delta 0), pack-reused 0
+Receiving objects: 100% (7/7), done.
+```
 ## pull（プル）
 リモートリポジトリからローカルリポジトリを更新するにはpullという操作を行う。
+```
+$ git pull
+```
 この操作を行うことで、リモートリポジトリから最新の変更履歴をダウンロードして、ユーザのローカルリポジトリを更新する。
-# ブランチ
-# タグ
-# コミット
-# プルリクエスト
+## fetch（フェッチ）
+リモートリポジトリから更新情報のみを取得するにはfetchコマンドを実行する。
+```
+$ git fetch
+```
 # 参考
 >[サル先生のGit入門](https://backlog.com/ja/git-tutorial/)
